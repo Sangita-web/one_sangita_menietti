@@ -1,0 +1,828 @@
+/* stile_esercizio2.css */
+html, body{
+     font: normal 16px/24px opensans, Helvetica, sans-serif;
+     margin: 0;
+     padding: 0;
+}
+
+.content-wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    max-width: 80px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+ /* Lista di navigazione */
+.nav-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Items della navigazione */
+.nav-item {
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+.nav-link {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    font-size: 18px;
+    margin: 8px;
+    padding: 8px;
+    white-space: nowrap;
+    position: relative; /* AGGIUNGI se non c'è */
+    transition: color 0.3s ease; /* AGGIUNGI se non c'è */
+}
+
+
+.nav-link:hover::after {
+    width: calc(100% - 16px);
+}
+
+.nav-link:hover {
+    color: black;
+    border-bottom: solid 4px transparent;
+}/* Animazioni scroll */
+    .animate {
+        opacity: 0;
+        transition: opacity 1.7s ease, transform .9s ease, filter .4s ease;
+    }
+
+    .animate.fade {
+        transform: translateY(30px);
+    }
+    .animate.fade.visible {
+        opacity: 1;
+        transform: none;
+    }
+
+    .animate.slide {
+        transform: translateY(50px);
+    }
+    .animate.slide.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .animate.slide-left {
+        transform: translateX(-50px);
+    }
+    .animate.slide-left.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .animate.slide-right {
+        transform: translateX(50px);
+    }
+    .animate.slide-right.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .animate.blur {
+        filter: blur(8px);
+    }
+    .animate.blur.visible {
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    /* Scroll fluido */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Animazione hover per i link del menu */
+    .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 8px;
+        bottom: 8px;
+        height: 4px;
+        width: 0;
+        background-color: #da98dc;
+        transition: width 0.4s ease;
+    }
+
+    .nav-link:hover::after {
+        width: calc(100% - 16px);
+    }
+
+    .nav-link:hover {
+        color: black;
+        border-bottom: solid 4px transparent;
+    }
+
+    .nav-link.selected::after {
+        width: 0;
+    }
+
+/* SEZIONE FOTO-TESTO */
+.foto-testo {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    min-height: 70vh;
+    margin: 40px 0;
+}
+
+.foto-colonna {
+    flex: 1;
+}
+
+.foto-colonna img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.testo-colonna {
+    flex: 1;
+}
+
+.testo-colonna h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #000;
+}
+
+.testo-colonna h3 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0 0 15px 0;
+}
+
+.testo-colonna p {
+    font-size: 16px;
+    color: #000;
+    margin: 0 0 30px 0;
+}
+
+.testo-colonna a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.testo-colonna a:hover {
+    text-decoration: underline;
+}
+
+/* SEZIONE HERO */
+.hero {
+    display: flex;
+    margin: 0;
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    min-width: 100vh;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #EAEAEA;
+    z-index: -1;
+}
+.sfondo-grigio-parapetto {
+    background-color: #EAEAEA;
+    margin-top: 20px;
+}
+.sfondo-grigio-immagini {
+    background-color: #EAEAEA;
+    margin-top: 20px;
+}
+
+.sfondo-grigio-pende {
+    background-color: #EAEAEA;
+    margin-top: 20px;
+}
+.sfondo-grigio-giroland {
+    background-color:#EAEAEA;
+    margin-top: 20px;
+}
+.sfondo-grigio-rossetti {
+    background-color: #EAEAEA;
+    margin-top: 20px;
+}
+.sfondo-grigio-video {
+    background-color: #EAEAEA;
+    margin-top: 80px;
+}
+.hero-image {
+    flex: 0 0 40%;
+    max-width: 40%;
+    position: relative;
+}
+/* 
+.foto-sangi {
+    padding-left: -12px;
+    margin-left: -12px;
+} */
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.hero-content h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #000;
+    margin: 0 0 20px 0;
+}
+
+.hero-content h3 {
+    font-size: 60px;
+    color: #da98dc;
+    line-height: 1.1;
+}
+.hero-content p {
+    font-size: 18px;
+    color: #000;
+    margin: 0 0 40px 0;
+}
+
+.hero-content .cta-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero-content .cta-link:hover {
+    text-decoration: underline;
+}
+
+/* ABOUT SECTION - sfondo grigio chiaro A TUTTA LARGHEZZA */
+.sfondo-0 {
+    background-color: #EAEAEA;
+    padding: 4rem 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 0;
+}
+
+/* PROJECT GIROLAND - sfondo grigio più scuro A TUTTA LARGHEZZA */
+.sfondo-1 {
+    background-color: #FAF8F8;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: left;
+}
+
+.project-label {
+    font-size: 1rem;
+    color: #da98dc;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.project-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 3rem;
+    text-align: left;
+    letter-spacing: 2px;
+}
+.project-title {
+    font-size: 3rem; 
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 2rem;
+    text-align: left;
+    letter-spacing: 2px;
+    line-height: 1.1; 
+}
+.project-description {
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+
+}
+
+.immaginegiroland2{
+    width: 100%;
+    height: 100%;
+    
+}
+
+/* testo in colonne */
+.testo-colonne {
+    column-count: 3;
+    column-gap: 40px;
+}
+
+/* stili testo */
+.color-gray {
+    color: rgb(180, 180, 180);
+}
+
+.font-normal {
+    font-weight: normal;
+}
+
+.font-1{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.font-2{
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.font-3{
+    font-size: 32px;
+    line-height: 40px;
+}
+/* SEZIONE MY STORY */
+.my-story-section {
+    /* position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    min-height: 100vh;
+    padding: 80px 0; */
+    background-image: url('../img/foto\ langhe.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.my-story-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.4); /* Velo bianco leggero */
+    z-index: 1;
+}
+
+.my-story-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.my-story-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 80px;
+}
+
+.my-story-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.my-story-text-left,
+.my-story-text-right {
+    color: white; /* Testo bianco */
+    font-size: 1.3rem;
+    line-height: 1.8;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8); /* Ombra forte per leggibilità */
+}
+
+.my-story-image img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.contact-content {
+    text-align: center;
+    max-width: 600px;
+}
+
+.contact-quote {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 80px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.logo-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #d4a5a5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.logo-circle:hover {
+    transform: scale(1.1);
+    animation: none;
+}
+
+.logo-text {
+    font-size: 6rem;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #000;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.contact-name {
+    font-size: 1.6rem;
+    color: #4a4a4a;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-quote {
+        font-size: 1.2rem;
+        margin-bottom: 60px;
+    }
+
+    .logo-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .logo-text {
+        font-size: 4.5rem;
+    }
+
+    .contact-name {
+        font-size: 1.3rem;
+    }
+}
+
+/* Responsive Contact */
+@media (max-width: 768px) {
+    .contact-box {
+        padding: 50px 30px;
+    }
+    
+    .contact-quote {
+        font-size: 1.1rem;
+    }
+    
+    .contact-name {
+        font-size: 1.5rem;
+    }
+    
+    .contact-social {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Responsive Contact */
+@media (max-width: 768px) {
+    .contact-box {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 40px 30px;
+        max-width: 90%;
+    }
+    
+    .contact-quote {
+        font-size: 1.1rem;
+    }
+    
+    .contact-name {
+        font-size: 1.5rem;
+    }
+    
+    .contact-social {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Responsive Contact */
+@media (max-width: 768px) {
+    .contact-quote {
+        font-size: 1.2rem;
+    }
+    
+    .contact-name {
+        font-size: 1.5rem;
+    }
+    
+    .contact-social {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .project-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .hero::before {
+        width: 100%;
+    }
+    
+    .hero-image {
+        flex: none;
+        max-width: 100%;
+    }
+    
+    .hero-content h3 {
+        font-size: 32px;
+    }
+    
+    .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+    
+    .foto-testo {
+        flex-direction: column;
+        min-height: auto;
+        gap: 30px;
+    }
+    
+    .testo-colonna h3 {
+        font-size: 32px;
+    }
+    
+    .testo-colonne {
+        columns: 1;
+    }
+    .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Altezza uniforme immagini/video su mobile */
+.sfondo-grigio-immagini img,
+.sfondo-grigio-pende img,
+.sfondo-grigio-pende video,
+.sfondo-grigio-parapetto img,
+.sfondo-grigio-video video {
+    height: 500px;
+}
+.sfondo-grigio-immagini .row.g-3 {
+    display: flex;
+    align-items: stretch;
+}
+.sfondo-grigio-pende {
+    background-color: #FAF8F8;
+    margin-top: 30px;
+}
+.same-height {
+    height: 100%;
+}
+
+.sfondo-grigio-immagini .col-md-6 {
+    display: flex;
+}
+
+.sfondo-grigio-immagini img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.image-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper img {
+  width: 48%;
+  height: auto;
+  object-fit: cover;
+}
+    .font-3{
+        font-size: 29px;
+        line-height: 36px;
+    }
+    
+    .font-2{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    
+    .logo{
+        max-width: 150px;
+    }
+    
+    .project-title {
+        font-size: 2.5rem;
+    }
+    /* Spazio tra le immagini su desktop */
+.col-md-6.mb-3.mb-md-0 {
+    padding-right: 10px;
+}
+
+.col-md-6:last-child {
+    padding-left: 10px;
+}
+
+.sfondo-1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ombra leggera alle immagini */
+.sfondo-1 img {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Effetto hover */
+.sfondo-1 img:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* MOBILE MENU */
+.btn-menu {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .btn-menu img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Mobile Navigation */
+    .mobile-nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(60, 60, 60, 0.95);
+        z-index: 999;
+        display: none;
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+    .mobile-nav-wrapper.show {
+        display: flex;
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .btn-close img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mobile-nav-wrapper .nav-list {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+        margin-top: 4rem;
+    }
+
+    .mobile-nav-wrapper .nav-item {
+        width: 100%;
+    }
+
+    .mobile-nav-wrapper .nav-link {
+        font-size: 24px;
+        color: white;
+        border: none;
+    }
+
+    .mobile-nav-wrapper .nav-link:hover {
+        color: #aa8e62;
+    }
+
+    .mobile-nav-wrapper .nav-link.selected {
+        color: #aa8e62;
+    }
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Sangita html</title>
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/stile_esercizio3.css">
+
+</head>
+<body>
+  <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-2">
+              <a href="#"><img class="logo" src="img/logo sanghi uff.svg" alt="Logo SM"></a>
+            </div>
+            <div class="col-lg-9 nav-wrapper d-none d-lg-block">
+                <ul class="nav-list">
+                      <li class="nav-item">
+                          <a href="#about" class="nav-link"> <strong>ABOUT</strong></a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#projects" class="nav-link"> <strong>PROJECTS</strong></a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#mystory" class="nav-link"><strong>MY STORY</strong></a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#contact" class="nav-link"> <strong>CONTACT</strong></a>
+                      </li>
+                </ul>
+            </div>
+            <div class="col-6 d-lg-none text-end">
+              <button class="btn-menu" id="menuToggle"><img src="img/menu.svg" alt="Menu"></button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mobile-nav-wrapper d-md-none" id="mobileNav">
+        <button class="btn-close" id="closeMenuBtn">
+          <img src="img/close.svg" alt="close" style="width: 100%; height: 100%;">
+        </button>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#projects" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a href="#mystory" class="nav-link">My Story</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container-fluid content-wrapper">
+          
+           <div class="hero" id="about">
+        <div class="hero-image">
+            <img src="img/foto_sangi.jpg" alt="Sangita Menietti" class="animate blur">
+        </div>
+        <div class="hero-content py-3">
+            <h2 class="animate fade">Sangita Menietti</h2>
+            <h3 class="animate slide-left">...forme che raccontano storie...</h3>
+            <p class="animate fade">Product & comunication design student</p>
+            <p class="animate fade">"Ciao sono Sangita,
+            studentessa del secondo anno di Design del Prodotto e della Comunicazione. 
+            Credo che ogni progetto nasca da un dialogo tra curiosità, osservazione e forma. 
+            Mi piace esplorare il legame tra oggetti, spazi e persone, dove il design diventa linguaggio e racconto."
+            </p>
+             <a href="#projects" class="cta-link animate fade">Projects</a>
+        </div>
+    </div>
+
+<!-- PROJECT GIROLAND - sfondo-1 -->
+<div class="sfondo-1" id="projects">
+    <div class="row">
+        <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 py-5">
+            <p class="project-label animate fade">Progetto: Geometria per il design.</p>
+            <h3 class="project-title animate slide-right">GIROLAND</h3>
+            <p class="project-description animate fade">
+                Spirale in legno ispirata alla chiocciola, dove proporzioni e ritmo creano un equilibrio armonico.<br>
+                Un progetto che trasforma concetti geometrici in forma concreta e tattile.
+            </p>
+        </div>
+      
+      <!-- Rettangolo grigio con immagini -->
+             <div class="container-fluid sfondo-grigio-giroland">
+        <div class="row py-3">
+            <div class="col-12">
+                <div class="row g-2">
+                    <div class="col-1 col-md-1"></div>
+                    <div class="col-5 col-md-5">
+                        <img src="img/giroland_1.jpg" alt="Giroland 1" class="animate blur" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                    </div>
+                    <div class="col-5 col-md-5">
+                        <img src="img/giroland_2.jpg" alt="Giroland 2" class="animate blur" style="width:100%; object-fit: contain; height: 100%;" >
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- PROJECT PENDE' - sfondo-1 -->
+<div class="sfondo-1">
+    <div class="row pt-5">
+        <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+            <p class="project-label animate fade">Progetto: Design del prodotto.</p>
+            <h3 class="project-title animate slide-right">PENDE'</h3>
+            <p class="project-description animate fade">
+                Un cappello modellato a mano che diventa gioiello: gli orecchini pendono 
+                delicatamente, creando un dialogo tra forma e ornamento. Il nome francese, Pendè, richiama eleganza e leggerezza.
+            </p>
+        </div>
+       
+       <!-- Rettangolo grigio chiaro con immagine e video PENDE' -->
+       <div class="container-fluid sfondo-grigio-pende">
+        <div class="row pt-5">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div class="row g-2 align-items-stretch">
+                    <div class="col-12 col-md-6 d-flex">
+                        <img src="img/pende1.JPG" alt="Pendè 1" class="animate blur" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                    <div class="col-12 col-md-6 d-flex">
+                        <video autoplay loop muted playsinline class="animate fade" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;">
+                            <source src="img/pende.mov" type="video/mp4">
+                            Il tuo browser non supporta il tag video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+       </div>
+    </div>
+</div>
+
+<!-- PROJECT PARAPETTO - sfondo-1 -->
+<div class="sfondo-1">
+    <div class="row pt-5">
+        <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+            <p class="project-label animate fade">Progetto: Progettazione 3d.</p>
+            <h3 class="project-title animate slide-right">PARAPETTO</h3>
+            <p class="project-description animate fade">
+                Progetto di un parapetto modulare che dialoga con l'ambiente naturale. 
+                Ogni elemento è studiato per resistenza agli urti, facilità di installazione e 
+                integrazione visiva nei tracciati di montagna.
+            </p>
+        </div>
+    </div>
+
+    <!-- Rettangolo grigio con immagini PARAPETTO -->
+    <div class="container-fluid sfondo-grigio-parapetto">
+        <div class="row py-3">
+            <div class="col-12">
+                <div class="row g-2">
+                    <div class="col-1 col-md-1"></div>
+                    <div class="col-5 col-md-5">
+                        <img src="img/parapetto_1.png" alt="Parapetto 1" class="animate blur" style="width: 100%; height: auto; display: block;">
+                    </div>
+                    <div class="col-5 col-md-5">
+                        <img src="img/parapetto_2.png" alt="Parapetto 2" class="animate blur" style="width: 100%; height: auto; display: block;">
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PROJECT LABORATORIO - sfondo-1 -->
+<div class="sfondo-1">
+    <div class="row pt-5">
+        <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+    <p class="project-label animate fade">Laboratorio: Sperimentazione materica.</p>
+    <h3 class="project-title animate slide-right">PENSARE CON LE MANI</h3>
+    <p class="project-description animate fade">
+        Nel design l'esperienza nasce dal fare: ogni prova, ogni materiale e ogni 
+        gesto contribuiscono a un linguaggio che va oltre ciò che si ottiene alla fine.
+    </p>
+</div>
+        </div>
+    </div>
+
+    <!-- Rettangolo grigio con video -->
+    <div class="container-fluid sfondo-grigio-video">
+                <div class="row g-2">
+                    <div class="col-1 col-md-1"></div>
+                    <div class="col-5 col-md-5">
+                        <video autoplay loop muted playsinline class="animate blur" style="width: 100%; height: 350px; object-fit: cover; display: block;">
+                            <source src="img/laboratorio_rattan2.mov" type="video/mp4">
+                            Il tuo browser non supporta il tag video.
+                        </video>
+                    </div>
+                    <div class="col-5 col-md-5">
+                        <video autoplay loop muted playsinline class="animate blur" style="width: 100%; height: 350px; object-fit: cover; display: block;">
+                            <source src="img/laboratorio_rattan1.mov" type="video/mp4">
+                            Il tuo browser non supporta il tag video.
+                        </video>
+                    </div>
+                    <div class="col-1 col-md-1"></div>
+                </div>
+                <!-- SECTION LA MIA STORIA -->
+    <div class="container-fluid mt-5 my-story-section" id="mystory">
+    <div class="row">
+        <h2 class="my-story-title animate fade">LA MIA STORIA</h2>
+        
+        <div class="row">
+            <div class="col-5 animate slide-left">
+                <p>Radici in Nepal,
+                cuore nelle
+                Langhe.
+                Due paesaggi
+                lontani ma
+                legati da un filo
+                di colori, luci e
+                culture a cui
+                sono legata.
+            L'incontro tra due mondi<br>
+                così diversi, apre ogni<br>
+                giorno nuove prospettive<br>
+                nel mio modo di pensare il 
+                design.</p>
+            </div>
+            
+            <div class="my-story-image offset-1 col-5 blur">
+                <img src="img/nepal.png" alt="Langhe">
+            </div>
+        </div>
+    </div>
+</div>
+            
+            <!-- SECTION CONTACT -->
+             <div class="banner">
+        <div class="quote">"Hai un'idea? Diamole forma insieme"</div>
+        <a href="mailto:sangitamenietti@gmail.com" class="monogram-link">
+            <span class="monogram-link">SM</span>
+        </a>
+        <div class="name">Sangita Menietti</div>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  // Menu hamburger mobile
+  const menuToggle = document.getElementById('menuToggle');
+  const closeMenuBtn = document.getElementById('closeMenuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+
+  // Apri menu
+  menuToggle.addEventListener('click', function() {
+    mobileNav.classList.add('show');
+  });
+
+  // Chiudi menu
+  closeMenuBtn.addEventListener('click', function() {
+    mobileNav.classList.remove('show');
+  });
+
+  // Chiudi menu quando clicchi su un link
+  const navLinks = mobileNav.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      mobileNav.classList.remove('show');
+    });
+  });
+
+  // Chiudi menu quando clicchi fuori
+  mobileNav.addEventListener('click', function(e) {
+    if (e.target === mobileNav) {
+      mobileNav.classList.remove('show');
+    }
+  });
+
+  // Animazioni allo scroll
+  const animatedElements = document.querySelectorAll('.animate');
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+          }
+          else {
+              entry.target.classList.remove('visible');
+          }
+      });
+  }, {
+      threshold: 0.1
+  });
+
+  animatedElements.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -55,6 +55,11 @@
         </ul>
     </div>
 
+        <!-- Floating hamburger: appare quando si scorre e rimane fissa -->
+        <button id="floatingMenu" class="floating-hamburger" aria-label="Apri menu" title="Apri menu">
+            <img src="img/menu.svg" alt="menu">
+        </button>
+
     <div class="container-fluid content-wrapper">
           
         <div class="hero" id="about">
@@ -244,6 +249,7 @@
                     
                     <p class="contact-name animate fade">Sangita Menietti</p>
                 </div>
+                
             </div>
         </div>
 
@@ -296,6 +302,59 @@
   });
 
   animatedElements.forEach(el => observer.observe(el));
+
+    // Floating hamburger: show when user scrolls down / is not at top
+    (function(){
+        const floatingMenu = document.getElementById('floatingMenu');
+        if (!floatingMenu) return;
+
+        // Only show floating hamburger on small screens (mobile)
+        const MOBILE_BREAK = 768;
+
+        function canShowOnSize() {
+            return window.innerWidth <= MOBILE_BREAK;
+        }
+
+        function updateVisibilityOnScroll() {
+            const currentY = window.scrollY || 0;
+            if (canShowOnSize() && currentY > 60) {
+                floatingMenu.classList.add('visible');
+            } else {
+                floatingMenu.classList.remove('visible');
+            }
+        }
+
+        // throttled scroll
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    updateVisibilityOnScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // hide/show on resize
+        window.addEventListener('resize', function() {
+            if (!canShowOnSize()) {
+                floatingMenu.classList.remove('visible');
+            }
+        });
+
+        // click: open mobile nav only on small screens (mobileNav is hidden by Bootstrap on larger screens)
+        floatingMenu.addEventListener('click', function() {
+            if (!canShowOnSize()) return; // ignore clicks on desktop
+            const mobileNav = document.getElementById('mobileNav');
+            if (!mobileNav) return;
+            // toggle so user can close by tapping again
+            mobileNav.classList.toggle('show');
+        });
+
+        // initial check
+        updateVisibilityOnScroll();
+    })();
 </script>
 </body>
 </html>
